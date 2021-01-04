@@ -1,0 +1,7 @@
+21:43:48 **** Clean-only build of configuration Debug for project testApp ****
+make clean 
+rm -rf  ./src/driver/PIO/PIOdriver.o  ./src/main.o ./src/startup.o  testApp.hex  testApp.siz  ./src/startup.d  ./src/driver/PIO/PIOdriver.d  ./src/main.d  testApp.elf
+ 
+
+21:43:48 Build Finished. 0 errors, 0 warnings. (took 158ms)
+

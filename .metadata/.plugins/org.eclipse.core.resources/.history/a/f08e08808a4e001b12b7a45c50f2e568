@@ -1,0 +1,24 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../src/driver/PIO/PIOdriver.c 
+
+OBJS += \
+./src/driver/PIO/PIOdriver.o 
+
+C_DEPS += \
+./src/driver/PIO/PIOdriver.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+src/driver/PIO/%.o: ../src/driver/PIO/%.c
+	@echo 'Building file: $<'
+	@echo 'Invoking: GNU ARM Cross C Compiler'
+	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"H:\github\stm32f7xx\testApp\src\common" -I"H:\github\stm32f7xx\testApp\src\driver\PIO" -std=gnu11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+
