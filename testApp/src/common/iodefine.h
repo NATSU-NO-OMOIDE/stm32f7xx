@@ -33,7 +33,10 @@ typedef struct	/* GPIOレジスタ構造 */
 /*********************************************************************
  * defines.
 *********************************************************************/
-#define REG_RCC_AHB1ENR	( *( ( uint32_t* )0x40023830 ) )
-#define REG_GPIO_D		( *( ( ST_REG_GPIO* )0x40020C00 ) )
+#define REG_REG_RCC_AHB1ENR_ADDR	(0x40023830)
+#define REG_GPIO_D_ADDR				(0x40020C00)
+
+#define REG_RCC_AHB1ENR	( *( ( uint32_t* )REG_REG_RCC_AHB1ENR_ADDR ) )
+#define REG_GPIO_D		( *( ( ST_REG_GPIO* )REG_GPIO_D_ADDR ) )
 
 #endif /* SRC_COMMON_IODEFINE_H_ */
