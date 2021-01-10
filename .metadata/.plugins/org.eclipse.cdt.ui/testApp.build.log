@@ -1,7 +1,35 @@
-21:43:48 **** Clean-only build of configuration Debug for project testApp ****
-make clean 
-rm -rf  ./src/driver/PIO/PIOdriver.o  ./src/main.o ./src/startup.o  testApp.hex  testApp.siz  ./src/startup.d  ./src/driver/PIO/PIOdriver.d  ./src/main.d  testApp.elf
+00:31:29 **** Build of configuration Debug for project testApp ****
+make all 
+Building file: ../src/driver/PIO/PIOdriver.c
+Invoking: GNU ARM Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"H:\github\stm32f7xx\testApp\src\common" -I"H:\github\stm32f7xx\testApp\src\driver\PIO" -std=gnu11 -MMD -MP -MF"src/driver/PIO/PIOdriver.d" -MT"src/driver/PIO/PIOdriver.o" -c -o "src/driver/PIO/PIOdriver.o" "../src/driver/PIO/PIOdriver.c"
+Finished building: ../src/driver/PIO/PIOdriver.c
+ 
+Building file: ../src/main.c
+Invoking: GNU ARM Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"H:\github\stm32f7xx\testApp\src\common" -I"H:\github\stm32f7xx\testApp\src\driver\PIO" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/startup.S
+Invoking: GNU ARM Cross Assembler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -x assembler-with-cpp -MMD -MP -MF"src/startup.d" -MT"src/startup.o" -c -o "src/startup.o" "../src/startup.S"
+Finished building: ../src/startup.S
+ 
+Building target: testApp.elf
+Invoking: GNU ARM Cross C Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "H:\github\stm32f7xx\testApp\src\stm32f407vg.ld" -nostdlib -Xlinker --gc-sections -Wl,-Map,"testApp.map" -o "testApp.elf"  ./src/driver/PIO/PIOdriver.o  ./src/main.o ./src/startup.o   
+Finished building target: testApp.elf
+ 
+Invoking: GNU ARM Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "testApp.elf"  "testApp.hex"
+Finished building: testApp.hex
+ 
+Invoking: GNU ARM Cross Print Size
+arm-none-eabi-size --format=berkeley "testApp.elf"
+   text	   data	    bss	    dec	    hex	filename
+    720	      0	    256	    976	    3d0	testApp.elf
+Finished building: testApp.siz
  
 
-21:43:48 Build Finished. 0 errors, 0 warnings. (took 158ms)
+00:31:30 Build Finished. 0 errors, 0 warnings. (took 779ms)
 
