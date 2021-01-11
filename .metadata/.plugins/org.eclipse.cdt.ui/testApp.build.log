@@ -1,13 +1,18 @@
-17:43:21 **** Incremental Build of configuration Debug for project testApp ****
+14:32:00 **** Incremental Build of configuration Debug for project testApp ****
 make all 
+Building file: ../src/driver/SysTick/SysTick.c
+Invoking: GNU ARM Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"H:\github\stm32f7xx\testApp\src\common" -I"H:\github\stm32f7xx\testApp\src\driver\SysTick" -I"H:\github\stm32f7xx\testApp\src\driver\PIO" -std=gnu11 -MMD -MP -MF"src/driver/SysTick/SysTick.d" -MT"src/driver/SysTick/SysTick.o" -c -o "src/driver/SysTick/SysTick.o" "../src/driver/SysTick/SysTick.c"
+Finished building: ../src/driver/SysTick/SysTick.c
+ 
 Building file: ../src/main.c
 Invoking: GNU ARM Cross C Compiler
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"H:\github\stm32f7xx\testApp\src\common" -I"H:\github\stm32f7xx\testApp\src\driver\PIO" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"H:\github\stm32f7xx\testApp\src\common" -I"H:\github\stm32f7xx\testApp\src\driver\SysTick" -I"H:\github\stm32f7xx\testApp\src\driver\PIO" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
 Finished building: ../src/main.c
  
 Building target: testApp.elf
 Invoking: GNU ARM Cross C Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "H:\github\stm32f7xx\testApp\src\stm32f407vg.ld" -nostdlib -Xlinker --gc-sections -Wl,-Map,"testApp.map" -o "testApp.elf"  ./src/driver/PIO/PIOdriver.o  ./src/main.o ./src/startup.o   
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "H:\github\stm32f7xx\testApp\src\stm32f407vg.ld" -nostdlib -Xlinker --gc-sections -Wl,-Map,"testApp.map" -o "testApp.elf"  ./src/driver/SysTick/SysTick.o  ./src/driver/PIO/PIOdriver.o  ./src/main.o ./src/startup.o   
 Finished building target: testApp.elf
  
 Invoking: GNU ARM Cross Create Flash Image
@@ -17,9 +22,9 @@ Finished building: testApp.hex
 Invoking: GNU ARM Cross Print Size
 arm-none-eabi-size --format=berkeley "testApp.elf"
    text	   data	    bss	    dec	    hex	filename
-    944	     32	    256	   1232	    4d0	testApp.elf
+   1088	     32	    264	   1384	    568	testApp.elf
 Finished building: testApp.siz
  
 
-17:43:22 Build Finished. 0 errors, 0 warnings. (took 525ms)
+14:32:00 Build Finished. 0 errors, 0 warnings. (took 678ms)
 

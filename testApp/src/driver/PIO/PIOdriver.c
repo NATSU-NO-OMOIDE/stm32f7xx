@@ -13,10 +13,10 @@ typedef struct
 
 static PIO_PORTSET s_pio_port_config_table[PIO_PORT_GROUP_NUM] =
 {
-	{ REG_GPIO_D_ADDR, 12 },
-	{ REG_GPIO_D_ADDR, 13 },
-	{ REG_GPIO_D_ADDR, 14 },
-	{ REG_GPIO_D_ADDR, 15 }
+	{ REG_GPIO_D_BASE_ADDR, 12 },
+	{ REG_GPIO_D_BASE_ADDR, 13 },
+	{ REG_GPIO_D_BASE_ADDR, 14 },
+	{ REG_GPIO_D_BASE_ADDR, 15 }
 };
 
 /* PIOÉhÉâÉCÉoèâä˙âªèàóù */

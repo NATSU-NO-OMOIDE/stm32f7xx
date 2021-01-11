@@ -30,13 +30,23 @@ typedef struct	/* GPIOレジスタ構造 */
 	uint32_t AFRH;
 } ST_REG_GPIO;
 
+typedef struct
+{
+	uint32_t CTRL;
+	uint32_t LOAD;
+	uint32_t VAL;
+	uint32_t CALIB;
+} ST_REG_STK;
+
 /*********************************************************************
  * defines.
 *********************************************************************/
-#define REG_REG_RCC_AHB1ENR_ADDR	(0x40023830)
-#define REG_GPIO_D_ADDR				(0x40020C00)
+#define REG_REG_RCC_AHB1ENR_BASE_ADDR	(0x40023830)
+#define REG_GPIO_D_BASE_ADDR			(0x40020C00)
+#define REG_STK_BASE_ADDR				(0xE000E010)
 
-#define REG_RCC_AHB1ENR	( *( ( uint32_t* )REG_REG_RCC_AHB1ENR_ADDR ) )
-#define REG_GPIO_D		( *( ( ST_REG_GPIO* )REG_GPIO_D_ADDR ) )
+#define REG_RCC_AHB1ENR	( *( ( uint32_t* )REG_REG_RCC_AHB1ENR_BASE_ADDR ) )
+#define REG_GPIO_D		( *( ( ST_REG_GPIO* )REG_GPIO_D_BASE_ADDR ) )
+#define REG_STK			( *( ( ST_REG_STK* )REG_STK_BASE_ADDR ) )
 
 #endif /* SRC_COMMON_IODEFINE_H_ */

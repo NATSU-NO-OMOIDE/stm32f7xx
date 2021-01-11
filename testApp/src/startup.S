@@ -199,12 +199,6 @@ PendSV_Handler:
 SVC_Handler:
 		b		SVC_Handler
 
-        .global SysTick_Handler
-        .thumb_func
-        .type   SysTick_Handler, %function
-SysTick_Handler:
-		b		SysTick_Handler
-
         .global Default_IRQHandler
         .thumb_func
         .type   Default_IRQHandler, %function
